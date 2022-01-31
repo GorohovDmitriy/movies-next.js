@@ -31,7 +31,8 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
+  height: calc(100vh - 70px);
 `;
 const Title = styled.h1`
-  font-size: 22px;
+  font-size: 42px;
 `;
