@@ -7,7 +7,7 @@ const Search: NextPage = () => {
       <Head>
         <title>Search Movies</title>
       </Head>
-      Поиск
+      Search
     </div>
   );
 };

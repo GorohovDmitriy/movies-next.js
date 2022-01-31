@@ -4,8 +4,8 @@ import { useRouter } from "next/router";
 import { INavigate } from "../../types/navigate";
 
 const navigate: INavigate[] = [
-  { id: 1, title: "Главная", path: "/" },
-  { id: 2, title: "Популярные", path: "/popular" },
+  { id: 1, title: "Home", path: "/" },
+  { id: 2, title: "Popular", path: "/popular" },
   { id: 3, title: "Top", path: "/top" },
 ];
 
@@ -20,7 +20,7 @@ const Header = () => {
         </Link>
         <Link href="/search">
           <Search className={pathname === "/search" ? "1px solid white" : ""}>
-            Поиск
+            Search
           </Search>
         </Link>
       </Logo>
