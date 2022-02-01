@@ -1,5 +1,6 @@
-import { NextPage } from "next";
 import Head from "next/head";
+import { NextPage } from "next";
+import { Container } from "../../styles/search";
 
 const Search: NextPage = () => {
   return (
@@ -7,7 +8,7 @@ const Search: NextPage = () => {
       <Head>
         <title>Search Movies</title>
       </Head>
-      Search
+      <Container>Search</Container>
     </div>
   );
 };
