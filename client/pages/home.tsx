@@ -2,18 +2,18 @@ import Head from "next/head";
 import styled from "styled-components";
 import { NextPage } from "next";
 
-const Search: NextPage = () => {
+const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Search Movies</title>
+        <title>Home Movies</title>
       </Head>
-      <Container>Search</Container>
+      <Container>Home</Container>
     </div>
   );
 };
 
-export default Search;
+export default Home;
 
 const Container = styled.div`
   margin-top: 2rem;

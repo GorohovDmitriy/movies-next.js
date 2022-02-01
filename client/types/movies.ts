@@ -5,7 +5,6 @@ export interface IMovieTranding {
   video?: boolean;
   backdrop_path?: string;
   first_air_date?: string;
-  genre_ids?: Array<number>;
   id?: number;
   media_type?: string;
   name?: string;
