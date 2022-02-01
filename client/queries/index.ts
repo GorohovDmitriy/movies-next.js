@@ -24,3 +24,17 @@ export const TOP_MOVIES = gql`
     }
   }
 `;
+export const NOW_PLAYING = gql`
+  query Query {
+    nowPlaying {
+      results {
+        id
+        overview
+        original_title
+        title
+        backdrop_path
+        poster_path
+      }
+    }
+  }
+`;

@@ -5,12 +5,13 @@ import { NextPage } from "next";
 import { NextRouter, useRouter } from "next/router";
 import { TRENDING_MOVIES } from "../../queries";
 import { Container } from "../../styles/popular";
+import { WebsiteUrls } from "../../types/enums";
 
 const Popular: NextPage = () => {
   const router: NextRouter = useRouter();
   const { data, error, loading } = useQuery(TRENDING_MOVIES);
 
-  if (error) router.push("/404");
+  if (error) router.push(WebsiteUrls.ERROR);
   if (loading) return <Spinner />;
 
   return (

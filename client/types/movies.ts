@@ -19,6 +19,15 @@ export interface IMovieTranding {
   vote_count?: number;
 }
 
+export interface IMovie {
+  id: number;
+  overview: string | null;
+  original_title: string | null;
+  title: string | null;
+  backdrop_path: string;
+  poster_path: string;
+}
+
 export interface IMovies {
   results: IMovieTranding[];
 }
