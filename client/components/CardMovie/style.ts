@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 60%;
-  box-sizing: border-box;
-  display: flex;
-  gap: 1rem;
+  display: grid;
+  grid-gap: 25px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   margin: 1rem;
 `;
+export const Wrap = styled.div``;
 
 export const Poster = styled.img`
   background: center center/cover no-repeat fixed;
