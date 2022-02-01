@@ -3,5 +3,6 @@ export enum WebsiteUrls {
     TOP = '/top',
     POPULAR = '/popular',
     SEARCH = '/search',
-    WELCOME = '/'
+    WELCOME = '/',
+    ERROR = '/404'
 }
