@@ -4,11 +4,18 @@ export const TRENDING_MOVIES = gql`
   query Query {
     trendingMovies {
       results {
-        id
-        title
         poster_path
+        title
+        backdrop_path
+        vote_count
+        overview
+        release_date
+        id
         original_title
       }
+      page
+      total_pages
+      total_results
     }
   }
 `;
@@ -16,11 +23,18 @@ export const TOP_MOVIES = gql`
   query Query {
     topMovies {
       results {
-        id
-        title
         poster_path
+        title
+        backdrop_path
+        vote_count
+        overview
+        release_date
+        id
         original_title
       }
+      page
+      total_pages
+      total_results
     }
   }
 `;
@@ -34,7 +48,12 @@ export const NOW_PLAYING = gql`
         title
         backdrop_path
         poster_path
+        vote_count
+        release_date
       }
+      page
+      total_pages
+      total_results
     }
   }
 `;
