@@ -57,3 +57,16 @@ export const NOW_PLAYING = gql`
     }
   }
 `;
+export const SEARCH_MOVIES = gql`
+  query SearchMovies($title: String) {
+    searchMovies(title: $title) {
+      results {
+        title
+        original_title
+      }
+      page
+      total_pages
+      total_results
+    }
+  }
+`;
