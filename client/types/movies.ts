@@ -26,6 +26,8 @@ export interface IMovie {
   title: string | null;
   backdrop_path: string;
   poster_path: string;
+  vote_count: number | null;
+  release_date: string;
 }
 
 export interface IMovies {

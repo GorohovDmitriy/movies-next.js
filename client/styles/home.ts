@@ -13,4 +13,8 @@ export const Title = styled.div`
   color: white;
   padding-top: 1rem;
   text-decoration: transparent;
+
+  @media (max-width: 500px) {
+    font-size: 18px;
+  }
 `;

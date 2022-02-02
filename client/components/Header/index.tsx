@@ -27,7 +27,11 @@ const Header = () => {
           </Title>
         </Link>
         <Link href={WebsiteUrls.SEARCH} passHref>
-          <Search className={pathname === WebsiteUrls.SEARCH ? "1px solid #df0000" : ""}>
+          <Search
+            className={
+              pathname === WebsiteUrls.SEARCH ? "1px solid #0063e5" : ""
+            }
+          >
             Search
           </Search>
         </Link>
@@ -37,7 +41,7 @@ const Header = () => {
         {navigate.map((nav: INavigate) => (
           <Link key={nav.id} href={nav.path} passHref>
             <StyledLink
-              className={pathname === nav.path ? "1px solid #df0000" : ""}
+              className={pathname === nav.path ? "1px solid #0063e5" : ""}
             >
               {nav.title}
             </StyledLink>
