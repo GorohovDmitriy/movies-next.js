@@ -30,6 +30,44 @@ export interface IMovie {
   release_date: string;
 }
 
+export interface IGenre {
+  id: number;
+  name: string;
+}
+
+export interface IProductCompany {
+  name: string;
+  id: number;
+  logo_path: string | null;
+  origin_coutry: string;
+}
+
+export interface IProductCountry {
+  iso_3166_1: string;
+  name: string;
+}
+
+export interface IDetails {
+  backdrop_path: string | null;
+  budget: number;
+  genres: IGenre[];
+  homepage: string | null;
+  id: number;
+  original_language: string;
+  original_title: string;
+  overview: string | null;
+  poster_path: string | null;
+  production_companies: IProductCompany[];
+  production_coutries: IProductCountry[];
+  release_date: string;
+  revenue: number;
+  runtime: number | null;
+  status: string;
+  tagline: string | null;
+  title: string;
+  vote_count: number;
+}
+
 export interface IMovies {
   results: IMovieTranding[];
 }

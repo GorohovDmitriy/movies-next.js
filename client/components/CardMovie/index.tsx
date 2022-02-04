@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FC } from "react";
 import { IMovie } from "../../types/movies";
 import { imageUrl } from "../../utils";
@@ -15,9 +16,10 @@ import {
 
 interface CardMovieProps {
   movie: IMovie;
+  path: string;
 }
 
-const CardMovie: FC<CardMovieProps> = ({ movie }) => {
+const CardMovie: FC<CardMovieProps> = ({ movie, path }) => {
   return (
     <Container>
       <Poster
@@ -35,7 +37,9 @@ const CardMovie: FC<CardMovieProps> = ({ movie }) => {
         <Block>
           <Overview>Overview: {movie.overview}</Overview>
           <ButtonGroup>
-            <Button>Open movie</Button>
+            <Link href={`${path}/${movie.id}`}>
+              <Button>Open movie</Button>
+            </Link>
           </ButtonGroup>
         </Block>
       </Wrap>

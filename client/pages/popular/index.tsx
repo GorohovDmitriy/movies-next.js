@@ -20,7 +20,7 @@ const Popular: NextPage = () => {
       <Head>
         <title>Popular Movies</title>
       </Head>
-      <Content title="Most Popular Movies" movies={movies} />
+      <Content path='/popular' title="Most Popular Movies" movies={movies} />
     </div>
   );
 };

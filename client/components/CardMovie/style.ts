@@ -94,7 +94,7 @@ export const ButtonGroup = styled.div`
   justify-content: flex-start;
 `;
 
-export const Button = styled.button`
+export const Button = styled.a`
   background-color: #0063e5;
   outline: none;
   padding: 10px;

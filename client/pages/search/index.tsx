@@ -35,7 +35,7 @@ const Search: NextPage = () => {
           />
         </Form>
       </Container>
-      {movies && <Content title="Found films" movies={movies} />}
+      {movies && <Content path='/search' title="Found films" movies={movies} />}
     </div>
   );
 };

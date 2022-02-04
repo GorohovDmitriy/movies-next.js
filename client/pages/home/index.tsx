@@ -20,7 +20,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Home Movies</title>
       </Head>
-      <Content title="Movies that are in cinemas now" movies={movies} />
+      <Content path='/home' title="Movies that are in cinemas now" movies={movies} />
     </>
   );
 };
