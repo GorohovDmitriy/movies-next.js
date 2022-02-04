@@ -97,6 +97,9 @@ export const ButtonGroup = styled.div`
 export const Button = styled.a`
   background-color: #0063e5;
   outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px;
   color: white;
   border-radius: 10px;

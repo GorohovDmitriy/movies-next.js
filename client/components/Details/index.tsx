@@ -6,7 +6,11 @@ interface DetailsProps {
 }
 
 const Details: FC<DetailsProps> = ({ movie }) => {
-  return <h1>{movie.title}</h1>;
+  return (
+    <>
+      <h1>{movie.title}</h1>
+    </>
+  );
 };
 
 export default Details;
