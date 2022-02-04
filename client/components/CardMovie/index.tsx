@@ -22,8 +22,8 @@ const CardMovie: FC<CardMovieProps> = ({ movie }) => {
     <Container>
       <Poster
         src={
-          `${imageUrl}${movie.backdrop_path}` ||
-          `${imageUrl}${movie.poster_path}`
+          `${imageUrl}${movie.poster_path}` &&
+          `${imageUrl}${movie.backdrop_path}`
         }
         alt="Poster"
       />

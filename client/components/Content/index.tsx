@@ -13,7 +13,7 @@ const Content: NextPage<ContainerProps> = ({ title, movies }) => {
   return (
     <Container>
       <Title>{title}</Title>
-      {movies.map((movie: IMovie) => (
+      {movies?.map((movie: IMovie) => (
         <Fragment key={movie.id}>
           <CardMovie movie={movie} />
         </Fragment>
