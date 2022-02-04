@@ -1,10 +1,11 @@
 import Head from "next/head";
+import Content from "../../components/Content";
 import { NextPage } from "next";
 import { Container, Form, Input, Title } from "../../styles/search";
 import { useQuery } from "@apollo/client";
 import { SEARCH_MOVIES } from "../../queries";
 import { FormEvent, useState } from "react";
-import Content from "../../components/Content";
+import { WebsiteUrls } from "../../types/enums";
 
 const Search: NextPage = () => {
   const [value, setValue] = useState("");
@@ -35,7 +36,13 @@ const Search: NextPage = () => {
           />
         </Form>
       </Container>
-      {movies && <Content title="Found films" movies={movies} />}
+      {movies && (
+        <Content
+          path={WebsiteUrls.SEARCH}
+          title="Found films"
+          movies={movies}
+        />
+      )}
     </div>
   );
 };

@@ -76,39 +76,38 @@ export const SEARCH_MOVIES = gql`
 `;
 
 export const DETAIL_MOVIE = gql`
-  query Query($detailsMovieId: Int) {
-    detailsMovie(id: $detailsMovieId) {
-      backdrop_path
+  query Query($id: Int) {
+    detailsMovie(id: $id) {
       budget
+      backdrop_path
       genres {
         id
         name
       }
-      homepage
+      runtime
+      revenue
+      tagline
+      status
+      video
+      title
+      vote_count
       id
       original_language
       original_title
       overview
       poster_path
-      production_companies {
-        name
-        id
-        logo_path
-        orogon_country
-      }
+      homepage
+      release_date
       production_countries {
         name
         iso_3166_1
       }
-      release_date
-      revenue
-      runtime
-      status
-      tagline
-      title
-      video
-      vote_average
-      vote_count
+      production_companies {
+        name
+        logo_path
+        id
+        orogon_country
+      }
     }
   }
 `;
