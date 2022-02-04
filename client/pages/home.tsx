@@ -9,6 +9,7 @@ import { Fragment } from "react";
 import { IMovie } from "../types/movies";
 import Spinner from "../components/Spinner";
 import CardMovie from "../components/CardMovie";
+import Content from "../components/Content";
 
 const Home: NextPage = () => {
   const router: NextRouter = useRouter();
@@ -22,15 +23,10 @@ const Home: NextPage = () => {
       <Head>
         <title>Home Movies</title>
       </Head>
-      <Container>
-        <Title>Movies that are in cinemas now</Title>
-
-        {data.nowPlaying.results.map((movie: IMovie) => (
-          <Fragment key={movie.id}>
-            <CardMovie movie={movie} />
-          </Fragment>
-        ))}
-      </Container>
+      <Content
+        title="Movies that are in cinemas now"
+        movies={data?.nowPlaying?.results}
+      />
     </>
   );
 };
