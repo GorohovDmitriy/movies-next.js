@@ -13,6 +13,7 @@ const Search: NextPage = () => {
       title: value,
     },
   });
+  const movies = data?.searchMovies?.results;
 
   const changeHandler = (e: FormEvent<HTMLInputElement>) => {
     setValue(e.currentTarget.value);
@@ -23,16 +24,18 @@ const Search: NextPage = () => {
       <Head>
         <title>Search Movies</title>
       </Head>
-    
+
       <Container>
         <Title>Enter movie name</Title>
         <Form>
-          <Input value={value} onChange={changeHandler} />
+          <Input
+            value={value}
+            onChange={changeHandler}
+            placeholder="Enter name movie"
+          />
         </Form>
       </Container>
-      {data?.searchMovies?.results && (
-        <Content title="Found films" movies={data?.searchMovies?.results} />
-      )}
+      {movies && <Content title="Found films" movies={movies} />}
     </div>
   );
 };

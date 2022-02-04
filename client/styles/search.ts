@@ -20,7 +20,6 @@ export const Form = styled.form`
 `;
 export const Input = styled.input.attrs({
   type: "text",
-  placeholder: "Enter movie name",
 })`
   width: 80%;
   outline: none;

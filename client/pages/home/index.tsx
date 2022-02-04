@@ -10,7 +10,8 @@ import Content from "../../components/Content";
 const Home: NextPage = () => {
   const router: NextRouter = useRouter();
   const { data, error, loading } = useQuery(NOW_PLAYING);
-
+  const movies = data?.nowPlaying?.results;
+  
   if (error) router.push(WebsiteUrls.ERROR);
   if (loading) return <Spinner />;
 
@@ -19,10 +20,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Home Movies</title>
       </Head>
-      <Content
-        title="Movies that are in cinemas now"
-        movies={data?.nowPlaying?.results}
-      />
+      <Content title="Movies that are in cinemas now" movies={movies} />
     </>
   );
 };
