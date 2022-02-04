@@ -58,15 +58,57 @@ export const NOW_PLAYING = gql`
   }
 `;
 export const SEARCH_MOVIES = gql`
-  query SearchMovies($title: String) {
+  query Query($title: String!) {
     searchMovies(title: $title) {
       results {
-        title
+        poster_path
+        overview
+        release_date
+        id
         original_title
+        original_language
+        title
+        backdrop_path
+        vote_count
       }
-      page
-      total_pages
-      total_results
+    }
+  }
+`;
+
+export const DETAIL_MOVIE = gql`
+  query Query($detailsMovieId: Int) {
+    detailsMovie(id: $detailsMovieId) {
+      backdrop_path
+      budget
+      genres {
+        id
+        name
+      }
+      homepage
+      id
+      original_language
+      original_title
+      overview
+      poster_path
+      production_companies {
+        name
+        id
+        logo_path
+        orogon_country
+      }
+      production_countries {
+        name
+        iso_3166_1
+      }
+      release_date
+      revenue
+      runtime
+      status
+      tagline
+      title
+      video
+      vote_average
+      vote_count
     }
   }
 `;

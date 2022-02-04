@@ -10,6 +10,7 @@ import { WebsiteUrls } from "../../types/enums";
 const Popular: NextPage = () => {
   const router: NextRouter = useRouter();
   const { data, error, loading } = useQuery(TRENDING_MOVIES);
+  const movies = data?.trendingMovies?.results;
 
   if (error) router.push(WebsiteUrls.ERROR);
   if (loading) return <Spinner />;
@@ -19,10 +20,7 @@ const Popular: NextPage = () => {
       <Head>
         <title>Popular Movies</title>
       </Head>
-      <Content
-        title="Most Popular Movies"
-        movies={data?.trendingMovies?.results}
-      />
+      <Content title="Most Popular Movies" movies={movies} />
     </div>
   );
 };

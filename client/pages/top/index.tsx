@@ -10,7 +10,8 @@ import { WebsiteUrls } from "../../types/enums";
 const Top: NextPage = () => {
   const router: NextRouter = useRouter();
   const { data, error, loading } = useQuery(TOP_MOVIES);
-
+  const movies = data?.topMovies?.results;
+  
   if (error) router.push(WebsiteUrls.ERROR);
   if (loading) return <Spinner />;
 
@@ -19,7 +20,7 @@ const Top: NextPage = () => {
       <Head>
         <title>Top Movies</title>
       </Head>
-      <Content title="Top rated films" movies={data?.topMovies?.results} />
+      <Content title="Top rated films" movies={movies} />
     </div>
   );
 };
