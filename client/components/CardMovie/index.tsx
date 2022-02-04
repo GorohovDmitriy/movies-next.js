@@ -20,7 +20,13 @@ interface CardMovieProps {
 const CardMovie: FC<CardMovieProps> = ({ movie }) => {
   return (
     <Container>
-      <Poster src={`${imageUrl}${movie.backdrop_path}`} alt="Poster" />
+      <Poster
+        src={
+          `${imageUrl}${movie.backdrop_path}` ||
+          `${imageUrl}${movie.poster_path}`
+        }
+        alt="Poster"
+      />
       <Wrap>
         <div>
           <Title>{movie.title}</Title>
