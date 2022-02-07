@@ -25,7 +25,7 @@ const DetailsComponent: FC<HomeMovieProps> = ({ movieId }) => {
   return (
     <>
       <Head>
-        <title>{movie.title}</title>
+        <title>{movie?.title}</title>
       </Head>
       <Container>
         <Details movie={movie} />

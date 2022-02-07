@@ -9,12 +9,26 @@ import { WebsiteUrls } from "../../types/enums";
 
 const Search: NextPage = () => {
   const [value, setValue] = useState("");
-  const { data } = useQuery(SEARCH_MOVIES, {
+  const { data, fetchMore } = useQuery(SEARCH_MOVIES, {
     variables: {
       title: value,
     },
   });
   const movies = data?.searchMovies?.results;
+
+  const scrollHandler = () => {
+    const pages = data.searchMovies.page;
+    fetchMore({
+      variables: { page: Number(pages + 1) },
+      updateQuery: (prevResult: any, { fetchMoreResult }: any) => {
+        fetchMoreResult.searchMovies.results = [
+          ...prevResult.searchMovies.results,
+          ...fetchMoreResult.searchMovies.results,
+        ];
+        return fetchMoreResult;
+      },
+    });
+  };
 
   const changeHandler = (e: FormEvent<HTMLInputElement>) => {
     setValue(e.currentTarget.value);
@@ -38,6 +52,7 @@ const Search: NextPage = () => {
       </Container>
       {movies && (
         <Content
+          scrollHandler={scrollHandler}
           path={WebsiteUrls.SEARCH}
           title="Found films"
           movies={movies}

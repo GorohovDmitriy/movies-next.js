@@ -1,65 +1,9 @@
 import { gql } from "@apollo/client";
 
 export const TRENDING_MOVIES = gql`
-  query Query {
-    trendingMovies {
-      results {
-        poster_path
-        title
-        backdrop_path
-        vote_count
-        overview
-        release_date
-        id
-        original_title
-      }
+  query Query($page: Int) {
+    trendingMovies(page: $page) {
       page
-      total_pages
-      total_results
-    }
-  }
-`;
-export const TOP_MOVIES = gql`
-  query Query {
-    topMovies {
-      results {
-        poster_path
-        title
-        backdrop_path
-        vote_count
-        overview
-        release_date
-        id
-        original_title
-      }
-      page
-      total_pages
-      total_results
-    }
-  }
-`;
-export const NOW_PLAYING = gql`
-  query Query {
-    nowPlaying {
-      results {
-        id
-        overview
-        original_title
-        title
-        backdrop_path
-        poster_path
-        vote_count
-        release_date
-      }
-      page
-      total_pages
-      total_results
-    }
-  }
-`;
-export const SEARCH_MOVIES = gql`
-  query Query($title: String!) {
-    searchMovies(title: $title) {
       results {
         poster_path
         overview
@@ -69,45 +13,117 @@ export const SEARCH_MOVIES = gql`
         original_language
         title
         backdrop_path
+        popularity
         vote_count
+        vote_average
+      }
+      total_pages
+      total_results
+    }
+  }
+`;
+export const TOP_MOVIES = gql`
+  query Query($page: Int) {
+    topMovies(page: $page) {
+      page
+      total_pages
+      total_results
+      results {
+        poster_path
+        overview
+        release_date
+        id
+        original_title
+        original_language
+        title
+        backdrop_path
+        popularity
+        vote_count
+        vote_average
+      }
+    }
+  }
+`;
+export const NOW_PLAYING = gql`
+  query Query($page: Int) {
+    nowPlaying(page: $page) {
+      page
+      total_pages
+      total_results
+      results {
+        poster_path
+        overview
+        release_date
+        id
+        original_title
+        original_language
+        title
+        backdrop_path
+        popularity
+        vote_count
+        vote_average
+      }
+    }
+  }
+`;
+export const SEARCH_MOVIES = gql`
+  query Query($title: String!, $page: Int) {
+    searchMovies(title: $title, page: $page) {
+      page
+      total_pages
+      total_results
+      results {
+        poster_path
+        overview
+        release_date
+        id
+        original_title
+        original_language
+        title
+        backdrop_path
+        popularity
+        vote_count
+        vote_average
       }
     }
   }
 `;
 
 export const DETAIL_MOVIE = gql`
-  query Query($id: Int) {
+  query DetailsMovie($id: Int) {
     detailsMovie(id: $id) {
-      budget
       backdrop_path
+      budget
       genres {
-        id
         name
+        id
       }
-      runtime
-      revenue
-      tagline
-      status
-      video
-      title
-      vote_count
+      homepage
       id
       original_language
       original_title
       overview
       poster_path
-      homepage
-      release_date
-      production_countries {
-        name
-        iso_3166_1
-      }
       production_companies {
-        name
+        origin_country
         logo_path
         id
-        orogon_country
+        name
       }
+      production_countries {
+        iso_3166_1
+        name
+      }
+      release_date
+      revenue
+      runtime
+      status
+      tagline
+      title
+      video
+      vote_count
+      vote_average
+      popularity
     }
   }
 `;

@@ -27,6 +27,8 @@ export interface IMovie {
   backdrop_path: string;
   poster_path: string;
   vote_count: number | null;
+  vote_average: number | null;
+  popularity: number;
   release_date: string;
 }
 
@@ -58,7 +60,7 @@ export interface IDetails {
   overview: string | null;
   poster_path: string | null;
   production_companies: IProductCompany[];
-  production_coutries: IProductCountry[];
+  production_countries: IProductCountry[];
   release_date: string;
   revenue: number;
   runtime: number | null;
@@ -66,6 +68,8 @@ export interface IDetails {
   tagline: string | null;
   title: string;
   vote_count: number;
+  vote_average: number
+  popularity: number
 }
 
 export interface IMovies {

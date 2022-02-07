@@ -2,6 +2,7 @@ import Link from "next/link";
 import { FC } from "react";
 import { IMovie } from "../../types/movies";
 import { imageUrl } from "../../utils";
+import ReactStars from "react-rating-stars-component";
 import {
   Container,
   Poster,
@@ -12,6 +13,8 @@ import {
   Wrap,
   Button,
   Block,
+  Rating,
+  WrapRating,
 } from "./style";
 
 interface CardMovieProps {
@@ -33,6 +36,17 @@ const CardMovie: FC<CardMovieProps> = ({ movie, path }) => {
         <div>
           <Title>{movie.title}</Title>
           <Release>Release date: {movie.release_date}</Release>
+          <WrapRating>
+            <Rating>{movie.vote_average}</Rating>
+            <ReactStars
+              count={10}
+              value={movie.vote_average}
+              size={22}
+              activeColor="#ffd700"
+              edit={false}
+              isHalf={true}
+            />
+          </WrapRating>
         </div>
         <Block>
           <Overview>Overview: {movie.overview}</Overview>

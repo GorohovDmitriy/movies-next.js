@@ -9,8 +9,24 @@ import { WebsiteUrls } from "../../types/enums";
 
 const Top: NextPage = () => {
   const router: NextRouter = useRouter();
-  const { data, error, loading } = useQuery(TOP_MOVIES);
+  const { data, error, loading, fetchMore } = useQuery(TOP_MOVIES, {
+    variables: { page: null },
+  });
   const movies = data?.topMovies?.results;
+
+  const scrollHandler = () => {
+    const pages = data.topMovies.page;
+    fetchMore({
+      variables: { page: Number(pages + 1) },
+      updateQuery: (prevResult: any, { fetchMoreResult }: any) => {
+        fetchMoreResult.topMovies.results = [
+          ...prevResult.topMovies.results,
+          ...fetchMoreResult.topMovies.results,
+        ];
+        return fetchMoreResult;
+      },
+    });
+  };
 
   if (error) router.push(WebsiteUrls.ERROR);
   if (loading) return <Spinner />;
@@ -20,7 +36,12 @@ const Top: NextPage = () => {
       <Head>
         <title>Top Movies</title>
       </Head>
-      <Content path="/top" title="Top rated films" movies={movies} />
+      <Content
+        scrollHandler={scrollHandler}
+        path="/top"
+        title="Top rated films"
+        movies={movies}
+      />
     </div>
   );
 };

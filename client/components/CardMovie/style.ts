@@ -120,3 +120,24 @@ export const Button = styled.a`
     width: 100%;
   }
 `;
+
+export const WrapRating = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+`;
+
+export const Rating = styled.div`
+  border-radius: 50%;
+  padding: 10px;
+  color: white;
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #0063e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
