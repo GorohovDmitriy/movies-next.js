@@ -1,24 +1,3 @@
-export interface IMovieTranding {
-  adult?: boolean;
-  releas_date?: string;
-  title?: string;
-  video?: boolean;
-  backdrop_path?: string;
-  first_air_date?: string;
-  id?: number;
-  media_type?: string;
-  name?: string;
-  original_title?: string;
-  origin_country?: Array<string>;
-  original_language?: string;
-  original_name?: string;
-  overview?: string;
-  popularity?: number;
-  poster_path?: string;
-  vote_average?: number;
-  vote_count?: number;
-}
-
 export interface IMovie {
   id: number;
   overview: string | null;
@@ -68,10 +47,29 @@ export interface IDetails {
   tagline: string | null;
   title: string;
   vote_count: number;
-  vote_average: number
-  popularity: number
+  vote_average: number;
+  popularity: number;
 }
 
-export interface IMovies {
-  results: IMovieTranding[];
+export interface IResponse {
+  page?: number | undefined;
+  results: IMovie[];
+  total_pages?: number;
+  total_results?: number;
+}
+
+export interface IMoviesHome {
+  nowPlaying: IResponse;
+}
+
+export interface IMoviesPopular {
+  trendingMovies: IResponse;
+}
+
+export interface IMoviesTop {
+  topMovies: IResponse;
+}
+
+export interface IMovieSearch {
+  searchMovies: IResponse;
 }

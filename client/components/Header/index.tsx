@@ -3,15 +3,7 @@ import Image from "next/image";
 import movieSvg from "../../public/movie.svg";
 import { NextRouter, useRouter } from "next/router";
 import { INavigate } from "../../types/navigate";
-import {
-  Input,
-  StyledLink,
-  Links,
-  Logo,
-  Search,
-  Title,
-  Wrapper,
-} from "./style";
+import { StyledLink, Links, Logo, Search, Title, Wrapper } from "./style";
 import { navigate } from "../../utils";
 import { WebsiteUrls } from "../../types/enums";
 
@@ -36,7 +28,6 @@ const Header = () => {
           </Search>
         </Link>
       </Logo>
-      <Input />
       <Links>
         {navigate.map((nav: INavigate) => (
           <Link key={nav.id} href={nav.path} passHref>

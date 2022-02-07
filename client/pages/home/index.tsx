@@ -4,20 +4,24 @@ import { useQuery } from "@apollo/client";
 import { NOW_PLAYING } from "../../queries";
 import { WebsiteUrls } from "../../types/enums";
 import { NextRouter, useRouter } from "next/router";
+import { IMoviesHome } from "../../types/movies";
 import Spinner from "../../components/Spinner";
 import Content from "../../components/Content";
 
 const Home: NextPage = () => {
   const router: NextRouter = useRouter();
-  const { data, error, loading, fetchMore } = useQuery(NOW_PLAYING, {
-    variables: { page: null },
-  });
+  const { data, error, loading, fetchMore } = useQuery<IMoviesHome>(
+    NOW_PLAYING,
+    {
+      variables: { page: null },
+    }
+  );
   const movies = data?.nowPlaying?.results;
 
   const scrollHandler = () => {
-    const pages = data.nowPlaying.page;
+    const pages = data?.nowPlaying?.page;
     fetchMore({
-      variables: { page: Number(pages + 1) },
+      variables: { page: Number(pages) + 1 },
       updateQuery: (prevResult: any, { fetchMoreResult }: any) => {
         fetchMoreResult.nowPlaying.results = [
           ...prevResult.nowPlaying.results,

@@ -26,24 +26,8 @@ export const Title = styled.a`
   }
 `;
 
-export const Input = styled.input.attrs({
-  type: "text",
-  placeholder: "Search movie",
-})`
-  display: none;
-
-  @media (max-width: 500px) {
-    display: flex;
-    width: 100%;
-  }
-`;
-
 export const Links = styled.ul`
   display: flex;
-
-  @media (max-width: 500px) {
-    display: none;
-  }
 `;
 
 export const StyledLink = styled.a`
@@ -52,6 +36,10 @@ export const StyledLink = styled.a`
   cursor: pointer;
   border-top: ${(props) => props.className};
   border-bottom: ${(props) => props.className};
+  @media (max-width: 500px) {
+    padding: 5px;
+    font-size: 12px;
+  }
 `;
 
 export const Search = styled.a`

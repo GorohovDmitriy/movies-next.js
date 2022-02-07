@@ -17,8 +17,6 @@ export const TRENDING_MOVIES = gql`
         vote_count
         vote_average
       }
-      total_pages
-      total_results
     }
   }
 `;

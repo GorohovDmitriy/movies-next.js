@@ -6,18 +6,19 @@ import { NextPage } from "next";
 import { NextRouter, useRouter } from "next/router";
 import { TOP_MOVIES } from "../../queries";
 import { WebsiteUrls } from "../../types/enums";
+import { IMoviesTop } from "../../types/movies";
 
 const Top: NextPage = () => {
   const router: NextRouter = useRouter();
-  const { data, error, loading, fetchMore } = useQuery(TOP_MOVIES, {
+  const { data, error, loading, fetchMore } = useQuery<IMoviesTop>(TOP_MOVIES, {
     variables: { page: null },
   });
   const movies = data?.topMovies?.results;
 
   const scrollHandler = () => {
-    const pages = data.topMovies.page;
+    const pages = data?.topMovies?.page;
     fetchMore({
-      variables: { page: Number(pages + 1) },
+      variables: { page: Number(pages) + 1 },
       updateQuery: (prevResult: any, { fetchMoreResult }: any) => {
         fetchMoreResult.topMovies.results = [
           ...prevResult.topMovies.results,
@@ -38,7 +39,7 @@ const Top: NextPage = () => {
       </Head>
       <Content
         scrollHandler={scrollHandler}
-        path="/top"
+        path={WebsiteUrls.TOP}
         title="Top rated films"
         movies={movies}
       />

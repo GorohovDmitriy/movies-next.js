@@ -6,10 +6,11 @@ import { useQuery } from "@apollo/client";
 import { SEARCH_MOVIES } from "../../queries";
 import { FormEvent, useState } from "react";
 import { WebsiteUrls } from "../../types/enums";
+import { IMovieSearch } from "../../types/movies";
 
 const Search: NextPage = () => {
   const [value, setValue] = useState("");
-  const { data, fetchMore } = useQuery(SEARCH_MOVIES, {
+  const { data, fetchMore } = useQuery<IMovieSearch>(SEARCH_MOVIES, {
     variables: {
       title: value,
     },
@@ -17,9 +18,9 @@ const Search: NextPage = () => {
   const movies = data?.searchMovies?.results;
 
   const scrollHandler = () => {
-    const pages = data.searchMovies.page;
+    const pages = data?.searchMovies?.page;
     fetchMore({
-      variables: { page: Number(pages + 1) },
+      variables: { page: Number(pages) + 1 },
       updateQuery: (prevResult: any, { fetchMoreResult }: any) => {
         fetchMoreResult.searchMovies.results = [
           ...prevResult.searchMovies.results,

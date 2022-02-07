@@ -6,16 +6,22 @@ import { NextPage } from "next";
 import { NextRouter, useRouter } from "next/router";
 import { TRENDING_MOVIES } from "../../queries";
 import { WebsiteUrls } from "../../types/enums";
+import { IMoviesPopular } from "../../types/movies";
 
 const Popular: NextPage = () => {
   const router: NextRouter = useRouter();
-  const { data, error, loading, fetchMore } = useQuery(TRENDING_MOVIES);
+  const { data, error, loading, fetchMore } = useQuery<IMoviesPopular>(
+    TRENDING_MOVIES,
+    {
+      variables: { page: 1 },
+    }
+  );
   const movies = data?.trendingMovies?.results;
 
   const scrollHandler = () => {
-    const pages = data.trendingMovies.page;
+    const pages = data?.trendingMovies?.page;
     fetchMore({
-      variables: { page: Number(pages + 1) },
+      variables: { page: Number(pages) + 1 },
       updateQuery: (prevResult: any, { fetchMoreResult }: any) => {
         fetchMoreResult.trendingMovies.results = [
           ...prevResult.trendingMovies.results,

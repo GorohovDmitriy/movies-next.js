@@ -38,7 +38,7 @@ interface DetailsProps {
 const Details: FC<DetailsProps> = ({ movie }) => {
   return (
     <Wrapper>
-      <Poster src={`${imageUrl}${movie.poster_path}`} />
+      <Poster src={`${imageUrl}${movie?.poster_path}`} />
       <Info>
         <Title>Title: {movie.title}</Title>
         <Original>Original title: {movie.original_title}</Original>
