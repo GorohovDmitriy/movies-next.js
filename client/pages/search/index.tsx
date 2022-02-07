@@ -7,6 +7,7 @@ import { SEARCH_MOVIES } from "../../queries";
 import { FormEvent, useState } from "react";
 import { WebsiteUrls } from "../../types/enums";
 import { IMovieSearch } from "../../types/movies";
+import Welcome from "..";
 
 const Search: NextPage = () => {
   const [value, setValue] = useState("");
@@ -51,6 +52,7 @@ const Search: NextPage = () => {
           />
         </Form>
       </Container>
+      {!movies && <Welcome />}
       {movies && (
         <Content
           scrollHandler={scrollHandler}

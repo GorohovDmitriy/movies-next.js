@@ -11,7 +11,7 @@ export const CTA = styled.div`
   max-width: 650px;
   padding: 80px 40px;
   width: 100%;
-  margin-top: 150px;
+  margin-top: 100px;
   display: flex;
   align-items: center;
   flex-direction: column;

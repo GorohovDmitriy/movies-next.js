@@ -28,5 +28,7 @@ export const Input = styled.input.attrs({
   color: white;
   background-color: transparent;
   border-radius: 8px;
-  margin-bottom: 2rem;
+  padding: 18px;
+  font-size: 18px;
+  margin-bottom: 4rem;
 `;
