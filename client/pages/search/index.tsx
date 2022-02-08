@@ -7,6 +7,7 @@ import { SEARCH_MOVIES } from "../../queries";
 import { FormEvent, useState } from "react";
 import { WebsiteUrls } from "../../types/enums";
 import { IMovieSearch } from "../../types/movies";
+import { useRouter } from "next/router";
 import Welcome from "..";
 
 const Search: NextPage = () => {

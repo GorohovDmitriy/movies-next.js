@@ -1,4 +1,4 @@
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen, fireEvent, act } from "@testing-library/react";
 import Search from "../pages/search";
 import { SEARCH_MOVIES } from "../queries";
 import { MockedProvider } from "@apollo/client/testing";
@@ -10,33 +10,43 @@ const searchMoks = {
   result: {},
 };
 
+const waitForData = () => new Promise((res) => setTimeout(res, 0));
+
 describe("Search", () => {
   it("render search component", () => {
-    render(
-      <MockedProvider mocks={[searchMoks]} addTypename={false}>
-        <Search />
-      </MockedProvider>
-    );
-    expect(screen.getByText("Enter movie name")).toBeInTheDocument();
-    expect(screen.getByRole("textbox")).toBeInTheDocument();
-    expect(screen.getByDisplayValue("")).toBeInTheDocument();
-    expect(screen.getByPlaceholderText("Enter name movie")).toBeInTheDocument();
-    expect(screen.getByRole("textbox")).not.toBeRequired();
-    expect(screen.getByRole("textbox")).toBeEmptyDOMElement();
-    fireEvent.change(screen.getByRole("textbox"), {
-      target: { value: "" },
+    act(() => {
+      render(
+        <MockedProvider mocks={[searchMoks]} addTypename={false}>
+          <Search />
+        </MockedProvider>
+      );
+      waitForData();
+      expect(screen.getByText("Enter movie name")).toBeInTheDocument();
+      expect(screen.getByRole("textbox")).toBeInTheDocument();
+      expect(screen.getByDisplayValue("")).toBeInTheDocument();
+      expect(
+        screen.getByPlaceholderText("Enter name movie")
+      ).toBeInTheDocument();
+      expect(screen.getByRole("textbox")).not.toBeRequired();
+      expect(screen.getByRole("textbox")).toBeEmptyDOMElement();
+      fireEvent.change(screen.getByRole("textbox"), {
+        target: { value: "" },
+      });
     });
   });
 
-  it("input focuse", () => {
-    const { getByTestId } = render(
-      <MockedProvider mocks={[searchMoks]} addTypename={false}>
-        <Search />
-      </MockedProvider>
-    );
-    const input = getByTestId("input");
-    expect(input).not.toHaveFocus();
-    input.focus();
-    expect(input).toHaveFocus();
+  it("input focus", () => {
+    act(() => {
+      const { getByTestId } = render(
+        <MockedProvider mocks={[searchMoks]} addTypename={false}>
+          <Search />
+        </MockedProvider>
+      );
+      waitForData();
+      const input = getByTestId("input");
+      expect(input).not.toHaveFocus();
+      input.focus();
+      expect(input).toHaveFocus();
+    });
   });
 });
