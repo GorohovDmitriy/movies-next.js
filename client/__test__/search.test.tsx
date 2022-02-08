@@ -27,4 +27,16 @@ describe("Search", () => {
       target: { value: "" },
     });
   });
+
+  it("input focuse", () => {
+    const { getByTestId } = render(
+      <MockedProvider mocks={[searchMoks]} addTypename={false}>
+        <Search />
+      </MockedProvider>
+    );
+    const input = getByTestId("input");
+    expect(input).not.toHaveFocus();
+    input.focus();
+    expect(input).toHaveFocus();
+  });
 });
