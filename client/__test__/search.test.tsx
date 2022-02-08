@@ -20,18 +20,19 @@ describe("Search", () => {
           <Search />
         </MockedProvider>
       );
+
       waitForData();
+
+      const input = screen.getByRole("textbox");
+
       expect(screen.getByText("Enter movie name")).toBeInTheDocument();
-      expect(screen.getByRole("textbox")).toBeInTheDocument();
+      expect(input).toBeInTheDocument();
+      expect(input).not.toBeRequired();
+      expect(input).toBeEmptyDOMElement();
       expect(screen.getByDisplayValue("")).toBeInTheDocument();
       expect(
         screen.getByPlaceholderText("Enter name movie")
       ).toBeInTheDocument();
-      expect(screen.getByRole("textbox")).not.toBeRequired();
-      expect(screen.getByRole("textbox")).toBeEmptyDOMElement();
-      fireEvent.change(screen.getByRole("textbox"), {
-        target: { value: "" },
-      });
     });
   });
 
@@ -42,11 +43,29 @@ describe("Search", () => {
           <Search />
         </MockedProvider>
       );
+
       waitForData();
+
       const input = getByTestId("input");
       expect(input).not.toHaveFocus();
       input.focus();
       expect(input).toHaveFocus();
     });
+  });
+
+  it("test for the onChange event", () => {
+    const { getByPlaceholderText } = render(
+      <MockedProvider mocks={[searchMoks]} addTypename={false}>
+        <Search />
+      </MockedProvider>
+    );
+
+    const searchInput = getByPlaceholderText("Enter name movie");
+    const query = "Harry Potter";
+    const mockChange = jest.fn();
+    searchInput.onchange = mockChange;
+
+    fireEvent.change(searchInput, { target: { value: query } });
+    expect(mockChange).toHaveBeenCalled();
   });
 });
