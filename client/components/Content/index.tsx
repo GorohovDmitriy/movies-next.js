@@ -7,7 +7,7 @@ import CardMovie from "../CardMovie";
 
 interface ContainerProps {
   title: string;
-  movies: IMovie[] | undefined;
+  movies?: IMovie[] | undefined;
   path: string;
   scrollHandler: () => void;
 }
