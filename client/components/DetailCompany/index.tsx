@@ -8,7 +8,7 @@ interface DetailsCompanyProps {
 const DetailCompany: FC<DetailsCompanyProps> = ({ company }) => (
   <>
     <li>{company.name}</li>
-    <li>{company.origin_coutry}</li>
+    <li>{company.origin_country}</li>
   </>
 );
 

@@ -21,7 +21,7 @@ export interface IProductCompany {
   name: string;
   id: number;
   logo_path: string | null;
-  origin_coutry: string;
+  origin_country: string;
 }
 
 export interface IProductCountry {
