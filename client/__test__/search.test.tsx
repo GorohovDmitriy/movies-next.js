@@ -1,4 +1,5 @@
 import { render, screen, fireEvent, act } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import Search from "../pages/search";
 import { SEARCH_MOVIES } from "../queries";
 import { MockedProvider } from "@apollo/client/testing";
@@ -67,5 +68,19 @@ describe("Search", () => {
 
     fireEvent.change(searchInput, { target: { value: query } });
     expect(mockChange).toHaveBeenCalled();
+  });
+
+  it("typing in Searchbox works", () => {
+    render(
+      <MockedProvider mocks={[searchMoks]} addTypename={false}>
+        <Search />
+      </MockedProvider>
+    );
+
+    expect(screen.queryByDisplayValue(/movies/i)).toBeNull();
+
+    userEvent.type(screen.getByRole("textbox"), "movies");
+
+    expect(screen.queryByDisplayValue(/movies/i)).toBeInTheDocument();
   });
 });

@@ -11,7 +11,9 @@ describe("Welcome", () => {
         <Welcome />
       </RouterContext.Provider>
     );
-    fireEvent.click(screen.getByRole("button", { name: "WELCOME" }));
+
+    fireEvent.click(screen.getByRole("button", { name: "WELCOME" }))
+
     expect(router.push).toHaveBeenCalledWith("/home");
   });
 });
