@@ -22,6 +22,8 @@ export const Projects = styled.img`
   width: 90%;
 `;
 
+export const Lists = styled.ul``;
+
 export const Start = styled.button`
   width: 100%;
   background: #0063e5;
