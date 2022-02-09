@@ -1,7 +1,9 @@
 import { render, screen } from "@testing-library/react";
 import Content from "../components/Content";
+import { WebsiteUrls } from "../types/enums";
+import { IMovie } from "../types/movies";
 
-const moviesData = [
+const moviesData: IMovie[] = [
   {
     poster_path: "/cVn8E3Fxbi8HzYYtaSfsblYC4gl.jpg",
     overview:
@@ -39,7 +41,7 @@ describe("Content component", () => {
       <Content
         title="Movies"
         movies={moviesData}
-        path="/home"
+        path={WebsiteUrls.HOME}
         scrollHandler={scrollHandler}
       />
     );
@@ -47,18 +49,19 @@ describe("Content component", () => {
     expect(screen.getByText("Movies")).toBeInTheDocument();
   });
 
-  it("movies render whit data", () => {
+  it("movies render with data", () => {
     const scrollHandler = jest.fn();
     render(
       <Content
         title="Movies"
         movies={moviesData}
-        path="/home"
+        path={WebsiteUrls.HOME}
         scrollHandler={scrollHandler}
       />
     );
 
     expect(screen.getByRole("list")).toBeInTheDocument();
+    expect(screen.getByText(/your eyes tell/i)).toBeInTheDocument();
   });
 
   it("movies render without data", () => {
@@ -67,11 +70,11 @@ describe("Content component", () => {
       <Content
         title="Movies"
         movies={[]}
-        path="/home"
+        path={WebsiteUrls.HOME}
         scrollHandler={scrollHandler}
       />
     );
 
-    expect(screen.queryByRole("list")).toBeInTheDocument();
+    expect(screen.queryByText("Your Eyes Tell")).toBeNull();
   });
 });

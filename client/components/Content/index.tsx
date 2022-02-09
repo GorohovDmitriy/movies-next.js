@@ -8,7 +8,7 @@ import { Lists } from "../../styles";
 
 interface ContainerProps {
   title: string;
-  movies?: IMovie[] | undefined;
+  movies: IMovie[];
   path: string;
   scrollHandler: () => void;
 }
@@ -30,7 +30,7 @@ const Content: NextPage<ContainerProps> = ({
               <Waypoint
                 scrollableAncestor={window}
                 key={movie.id}
-                onEnter={() => scrollHandler()}
+                onEnter={scrollHandler}
               />
             )}
           </Fragment>

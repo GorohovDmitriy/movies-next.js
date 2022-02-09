@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
 import CardMovie from "../components/CardMovie";
+import { IMovie } from "../types/movies";
 
-const movieData = {
+const movieData: IMovie = {
   poster_path: "/cVn8E3Fxbi8HzYYtaSfsblYC4gl.jpg",
   overview:
     "A tragic accident lead to Kaori's blindness, but she clings to life and the smaller pleasures it can still afford her. She meets Rui and begins to talk to him. Rui was once a promising kickboxer, but something happened in his past. Kaori's smile brings out a change in Rui. However, the two are connected in more than one way. Rui attempts to do what is right.",
