@@ -2,6 +2,7 @@ export interface IMovie {
   id: number;
   overview: string | null;
   original_title: string | null;
+  original_language: string;
   title: string | null;
   backdrop_path: string;
   poster_path: string;

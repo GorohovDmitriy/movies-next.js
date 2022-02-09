@@ -22,9 +22,13 @@ export const Projects = styled.img`
   width: 90%;
 `;
 
-export const Start = styled.a`
+export const Lists = styled.ul``;
+
+export const Start = styled.button`
   width: 100%;
   background: #0063e5;
+  outline: none;
+  border: none;
   font-weight: bold;
   padding: 17px 0;
   text-align: center;

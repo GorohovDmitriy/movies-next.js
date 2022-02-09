@@ -51,7 +51,7 @@ const CardMovie: FC<CardMovieProps> = ({ movie, path }) => {
         <Block>
           <Overview>Overview: {movie.overview}</Overview>
           <ButtonGroup>
-            <Link href={`${path}/${movie.id}`}>
+            <Link href={`${path}/${movie.id}`} passHref>
               <Button>Open movie</Button>
             </Link>
           </ButtonGroup>

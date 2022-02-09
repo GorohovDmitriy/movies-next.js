@@ -46,6 +46,7 @@ const Search: NextPage = () => {
         <Title>Enter movie name</Title>
         <Form>
           <Input
+            data-testid="input"
             value={value}
             onChange={changeHandler}
             placeholder="Enter name movie"
