@@ -8,7 +8,7 @@ import { Lists } from "../../styles";
 
 interface ContainerProps {
   title: string;
-  movies: IMovie[];
+  movies: IMovie[] | undefined;
   path: string;
   scrollHandler: () => void;
 }

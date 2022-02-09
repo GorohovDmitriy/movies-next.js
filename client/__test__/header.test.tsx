@@ -45,4 +45,18 @@ describe("Header component", () => {
     expect(search).toBeInTheDocument();
     expect(screen.getByText(/top/i)).toBeInTheDocument();
   });
+
+  it("render list navigation", () => {
+    const router = createMockRouter({ pathname: WebsiteUrls.HOME });
+    render(
+      <RouterContext.Provider value={router}>
+        <Header />
+      </RouterContext.Provider>
+    );
+
+    const list = screen.getByRole("list");
+
+    expect(list).toBeInTheDocument();
+    expect(screen.getByText(/popular/i)).toBeInTheDocument();
+  });
 });
