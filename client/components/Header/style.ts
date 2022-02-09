@@ -17,12 +17,12 @@ export const Logo = styled.div`
   gap: 10px;
 `;
 
-export const Title = styled.a`
+export const Title = styled.h2`
+  color: white;
   cursor: pointer;
 
   @media (max-width: 500px) {
-    width: 20px;
-    height: 20px;
+    font-size: 14px;
   }
 `;
 
