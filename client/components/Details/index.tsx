@@ -38,7 +38,7 @@ interface DetailsProps {
 const Details: FC<DetailsProps> = ({ movie }) => {
   return (
     <Wrapper>
-      <Poster src={`${imageUrl}${movie?.poster_path}`} />
+      <Poster src={`${imageUrl}${movie?.poster_path}`} alt={movie.title} />
       <Info>
         <Title>Title: {movie.title}</Title>
         <Original>Original title: {movie.original_title}</Original>
@@ -60,7 +60,7 @@ const Details: FC<DetailsProps> = ({ movie }) => {
         <Time>Runtime: {movie.runtime} min</Time>
         <Status>Status: {movie.status}</Status>
         <Budget>Budget: {movie.budget}$</Budget>
-        <Genres>
+        <Genres role="genre">
           Genres:
           {movie.genres.map((genre: IGenre) => (
             <DetailGenre key={genre.id} genre={genre} />
@@ -74,13 +74,13 @@ const Details: FC<DetailsProps> = ({ movie }) => {
             {movie.homepage}
           </a>
         </Link>
-        <Company>
+        <Company role='company'>
           Products companies:
           {movie.production_companies.map((product: IProductCompany) => (
             <DetailCompany key={product.id} company={product} />
           ))}
         </Company>
-        <Countries>
+        <Countries role='country'>
           {movie.production_countries.map((country: IProductCountry) => (
             <DetailCountry country={country} key={country.iso_3166_1} />
           ))}

@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import CardMovie from "../components/CardMovie";
+import { WebsiteUrls } from "../types/enums";
 import { IMovie } from "../types/movies";
 
 const movieData: IMovie = {
@@ -20,32 +21,34 @@ const movieData: IMovie = {
 describe("CardMovie component", () => {
   it("alternative text display", () => {
     const { getByAltText } = render(
-      <CardMovie movie={movieData} path="/home" />
+      <CardMovie movie={movieData} path={WebsiteUrls.HOME} />
     );
 
     expect(getByAltText("Poster")).toBeInTheDocument();
   });
 
   it("render an image", () => {
-    const image = render(<CardMovie movie={movieData} path="/home" />);
+    const image = render(
+      <CardMovie movie={movieData} path={WebsiteUrls.HOME} />
+    );
 
     expect(image.getByRole("img")).toBeInTheDocument();
   });
 
   it("renders release date", () => {
-    render(<CardMovie movie={movieData} path="/home" />);
+    render(<CardMovie movie={movieData} path={WebsiteUrls.HOME} />);
 
     expect(screen.getByText(/release date:/i)).toBeInTheDocument();
   });
 
   it("renders Overview", () => {
-    render(<CardMovie movie={movieData} path="/home" />);
+    render(<CardMovie movie={movieData} path={WebsiteUrls.HOME} />);
 
     expect(screen.getByText(/overview:/i)).toBeInTheDocument();
   });
 
   it("details button render", () => {
-    render(<CardMovie movie={movieData} path="/home" />);
+    render(<CardMovie movie={movieData} path={WebsiteUrls.HOME} />);
 
     const linkEl = screen.getByRole("link", { name: "Open movie" });
 

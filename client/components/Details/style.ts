@@ -37,8 +37,7 @@ export const Info = styled.div`
   margin: 1rem;
 `;
 
-export const Title = styled.div`
-  font-size: 44px;
+export const Title = styled.h1`
   font-weight: 600;
 `;
 
@@ -107,7 +106,7 @@ export const Link = styled.div`
   }
 `;
 
-export const Genres = styled.div`
+export const Genres = styled.ul`
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
@@ -135,7 +134,7 @@ export const Company = styled.div`
     flex-direction: column;
   }
 `;
-export const Countries = styled.div`
+export const Countries = styled.ul`
   display: flex;
   flex-direction: row;
   gap: 0.5rem;

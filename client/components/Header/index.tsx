@@ -1,6 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
-import movieSvg from "../../public/movie.svg";
 import { NextRouter, useRouter } from "next/router";
 import { INavigate } from "../../types/navigate";
 import { StyledLink, Links, Logo, Search, Title, Wrapper } from "./style";
@@ -14,12 +12,11 @@ const Header = () => {
     <Wrapper>
       <Logo>
         <Link href={WebsiteUrls.WELCOME} passHref>
-          <Title>
-            <Image src={movieSvg} alt="Logo" width={50} height={50} />
-          </Title>
+          <Title>Movie App</Title>
         </Link>
         <Link href={WebsiteUrls.SEARCH} passHref>
           <Search
+            role="search"
             className={
               pathname === WebsiteUrls.SEARCH ? "1px solid #0063e5" : ""
             }
@@ -32,6 +29,7 @@ const Header = () => {
         {navigate.map((nav: INavigate) => (
           <Link key={nav.id} href={nav.path} passHref>
             <StyledLink
+              role="search-item"
               className={pathname === nav.path ? "1px solid #0063e5" : ""}
             >
               {nav.title}
