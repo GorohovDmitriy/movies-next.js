@@ -77,4 +77,18 @@ describe("Content component", () => {
 
     expect(screen.queryByText("Your Eyes Tell")).toBeNull();
   });
+
+  it("should render content component", () => {
+    const scrollHandler = jest.fn();
+    const component = render(
+      <Content
+        title="Movies"
+        movies={moviesData}
+        path={WebsiteUrls.HOME}
+        scrollHandler={scrollHandler}
+      />
+    );
+
+    expect(component).toMatchSnapshot();
+  });
 });
