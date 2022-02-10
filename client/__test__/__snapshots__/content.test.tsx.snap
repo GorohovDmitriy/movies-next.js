@@ -1,0 +1,756 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Content component should render content component 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="top__Container-sc-s6fps5-0 aaMis"
+      >
+        <div
+          class="top__Title-sc-s6fps5-1 eZwAiT"
+        >
+          Movies
+        </div>
+        <ul
+          class="styles__Lists-sc-1qe8oee-4"
+        >
+          <div
+            class="style__Container-sc-1xzf5f3-0 llUJEe"
+          >
+            <img
+              alt="Poster"
+              class="style__Poster-sc-1xzf5f3-1 gKTfaY"
+              src="http://image.tmdb.org/t/p/original//v5CEt88iDsuoMaW1Q5Msu9UZdEt.jpg"
+            />
+            <div
+              class="style__Wrap-sc-1xzf5f3-2 daCGNj"
+            >
+              <div>
+                <div
+                  class="style__Title-sc-1xzf5f3-3 bVHCIC"
+                >
+                  Your Eyes Tell
+                </div>
+                <p
+                  class="style__Release-sc-1xzf5f3-4 cwkOWS"
+                >
+                  Release date: 
+                  2020-10-23
+                </p>
+                <div
+                  class="style__WrapRating-sc-1xzf5f3-9 hHbuls"
+                >
+                  <div
+                    class="style__Rating-sc-1xzf5f3-10 djznqf"
+                  >
+                    8.8
+                  </div>
+                  <div
+                    class="react-stars-wrapper-06934146182205052"
+                    style="display: flex;"
+                  >
+                    <div
+                      aria-label="add rating by typing an integer from 0 to 5 or pressing arrow keys"
+                      class="undefined react-stars"
+                      style="overflow: hidden; position: relative;"
+                    >
+                      <style>
+                        
+    .react-stars-06934146182205052:before {
+      position: absolute;
+      overflow: hidden;
+      display: block;
+      z-index: 1;
+      top: 0; left: 0;
+      width: 50%;
+      content: attr(data-forhalf);
+      color: #ffd700;
+  }
+                      </style>
+                      <span
+                        class=""
+                        data-forhalf="★"
+                        data-index="0"
+                        style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: rgb(255, 215, 0); font-size: 22px;"
+                      >
+                        ★
+                      </span>
+                      <span
+                        class=""
+                        data-forhalf="★"
+                        data-index="1"
+                        style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: rgb(255, 215, 0); font-size: 22px;"
+                      >
+                        ★
+                      </span>
+                      <span
+                        class=""
+                        data-forhalf="★"
+                        data-index="2"
+                        style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: rgb(255, 215, 0); font-size: 22px;"
+                      >
+                        ★
+                      </span>
+                      <span
+                        class=""
+                        data-forhalf="★"
+                        data-index="3"
+                        style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: rgb(255, 215, 0); font-size: 22px;"
+                      >
+                        ★
+                      </span>
+                      <span
+                        class=""
+                        data-forhalf="★"
+                        data-index="4"
+                        style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: rgb(255, 215, 0); font-size: 22px;"
+                      >
+                        ★
+                      </span>
+                      <span
+                        class=""
+                        data-forhalf="★"
+                        data-index="5"
+                        style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: rgb(255, 215, 0); font-size: 22px;"
+                      >
+                        ★
+                      </span>
+                      <span
+                        class=""
+                        data-forhalf="★"
+                        data-index="6"
+                        style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: rgb(255, 215, 0); font-size: 22px;"
+                      >
+                        ★
+                      </span>
+                      <span
+                        class=""
+                        data-forhalf="★"
+                        data-index="7"
+                        style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: rgb(255, 215, 0); font-size: 22px;"
+                      >
+                        ★
+                      </span>
+                      <span
+                        class="react-stars-06934146182205052"
+                        data-forhalf="★"
+                        data-index="8"
+                        style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: gray; font-size: 22px;"
+                      >
+                        ★
+                      </span>
+                      <span
+                        class=""
+                        data-forhalf="★"
+                        data-index="9"
+                        style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: gray; font-size: 22px;"
+                      >
+                        ★
+                      </span>
+                      <p
+                        role="status"
+                        style="position: absolute; left: -200rem;"
+                      >
+                        8.8
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="style__Block-sc-1xzf5f3-5 eoCwme"
+              >
+                <div
+                  class="style__Overview-sc-1xzf5f3-6 gyiwdH"
+                >
+                  Overview: 
+                  A tragic accident lead to Kaori's blindness, but she clings to life and the smaller pleasures it can still afford her. She meets Rui and begins to talk to him. Rui was once a promising kickboxer, but something happened in his past. Kaori's smile brings out a change in Rui. However, the two are connected in more than one way. Rui attempts to do what is right.
+                </div>
+                <div
+                  class="style__ButtonGroup-sc-1xzf5f3-7 gKxUYM"
+                >
+                  <a
+                    class="style__Button-sc-1xzf5f3-8 bpOjzc"
+                    href="/home/730154"
+                  >
+                    Open movie
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <span
+            style="font-size: 0px;"
+          />
+          <div
+            class="style__Container-sc-1xzf5f3-0 llUJEe"
+          >
+            <img
+              alt="Poster"
+              class="style__Poster-sc-1xzf5f3-1 gKTfaY"
+              src="http://image.tmdb.org/t/p/original//5hNcsnMkwU2LknLoru73c76el3z.jpg"
+            />
+            <div
+              class="style__Wrap-sc-1xzf5f3-2 daCGNj"
+            >
+              <div>
+                <div
+                  class="style__Title-sc-1xzf5f3-3 bVHCIC"
+                >
+                  Dilwale Dulhania Le Jayenge
+                </div>
+                <p
+                  class="style__Release-sc-1xzf5f3-4 cwkOWS"
+                >
+                  Release date: 
+                  1995-10-20
+                </p>
+                <div
+                  class="style__WrapRating-sc-1xzf5f3-9 hHbuls"
+                >
+                  <div
+                    class="style__Rating-sc-1xzf5f3-10 djznqf"
+                  >
+                    8.7
+                  </div>
+                  <div
+                    class="react-stars-wrapper-045151826865700473"
+                    style="display: flex;"
+                  >
+                    <div
+                      aria-label="add rating by typing an integer from 0 to 5 or pressing arrow keys"
+                      class="undefined react-stars"
+                      style="overflow: hidden; position: relative;"
+                    >
+                      <style>
+                        
+    .react-stars-045151826865700473:before {
+      position: absolute;
+      overflow: hidden;
+      display: block;
+      z-index: 1;
+      top: 0; left: 0;
+      width: 50%;
+      content: attr(data-forhalf);
+      color: #ffd700;
+  }
+                      </style>
+                      <span
+                        class=""
+                        data-forhalf="★"
+                        data-index="0"
+                        style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: rgb(255, 215, 0); font-size: 22px;"
+                      >
+                        ★
+                      </span>
+                      <span
+                        class=""
+                        data-forhalf="★"
+                        data-index="1"
+                        style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: rgb(255, 215, 0); font-size: 22px;"
+                      >
+                        ★
+                      </span>
+                      <span
+                        class=""
+                        data-forhalf="★"
+                        data-index="2"
+                        style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: rgb(255, 215, 0); font-size: 22px;"
+                      >
+                        ★
+                      </span>
+                      <span
+                        class=""
+                        data-forhalf="★"
+                        data-index="3"
+                        style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: rgb(255, 215, 0); font-size: 22px;"
+                      >
+                        ★
+                      </span>
+                      <span
+                        class=""
+                        data-forhalf="★"
+                        data-index="4"
+                        style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: rgb(255, 215, 0); font-size: 22px;"
+                      >
+                        ★
+                      </span>
+                      <span
+                        class=""
+                        data-forhalf="★"
+                        data-index="5"
+                        style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: rgb(255, 215, 0); font-size: 22px;"
+                      >
+                        ★
+                      </span>
+                      <span
+                        class=""
+                        data-forhalf="★"
+                        data-index="6"
+                        style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: rgb(255, 215, 0); font-size: 22px;"
+                      >
+                        ★
+                      </span>
+                      <span
+                        class=""
+                        data-forhalf="★"
+                        data-index="7"
+                        style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: rgb(255, 215, 0); font-size: 22px;"
+                      >
+                        ★
+                      </span>
+                      <span
+                        class="react-stars-045151826865700473"
+                        data-forhalf="★"
+                        data-index="8"
+                        style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: gray; font-size: 22px;"
+                      >
+                        ★
+                      </span>
+                      <span
+                        class=""
+                        data-forhalf="★"
+                        data-index="9"
+                        style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: gray; font-size: 22px;"
+                      >
+                        ★
+                      </span>
+                      <p
+                        role="status"
+                        style="position: absolute; left: -200rem;"
+                      >
+                        8.7
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="style__Block-sc-1xzf5f3-5 eoCwme"
+              >
+                <div
+                  class="style__Overview-sc-1xzf5f3-6 gyiwdH"
+                >
+                  Overview: 
+                  Raj is a rich, carefree, happy-go-lucky second generation NRI. Simran is the daughter of Chaudhary Baldev Singh, who in spite of being an NRI is very strict about adherence to Indian values. Simran has left for India to be married to her childhood fiancé. Raj leaves for India with a mission at his hands, to claim his lady love under the noses of her whole family. Thus begins a saga.
+                </div>
+                <div
+                  class="style__ButtonGroup-sc-1xzf5f3-7 gKxUYM"
+                >
+                  <a
+                    class="style__Button-sc-1xzf5f3-8 bpOjzc"
+                    href="/home/19404"
+                  >
+                    Open movie
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="top__Container-sc-s6fps5-0 aaMis"
+    >
+      <div
+        class="top__Title-sc-s6fps5-1 eZwAiT"
+      >
+        Movies
+      </div>
+      <ul
+        class="styles__Lists-sc-1qe8oee-4"
+      >
+        <div
+          class="style__Container-sc-1xzf5f3-0 llUJEe"
+        >
+          <img
+            alt="Poster"
+            class="style__Poster-sc-1xzf5f3-1 gKTfaY"
+            src="http://image.tmdb.org/t/p/original//v5CEt88iDsuoMaW1Q5Msu9UZdEt.jpg"
+          />
+          <div
+            class="style__Wrap-sc-1xzf5f3-2 daCGNj"
+          >
+            <div>
+              <div
+                class="style__Title-sc-1xzf5f3-3 bVHCIC"
+              >
+                Your Eyes Tell
+              </div>
+              <p
+                class="style__Release-sc-1xzf5f3-4 cwkOWS"
+              >
+                Release date: 
+                2020-10-23
+              </p>
+              <div
+                class="style__WrapRating-sc-1xzf5f3-9 hHbuls"
+              >
+                <div
+                  class="style__Rating-sc-1xzf5f3-10 djznqf"
+                >
+                  8.8
+                </div>
+                <div
+                  class="react-stars-wrapper-06934146182205052"
+                  style="display: flex;"
+                >
+                  <div
+                    aria-label="add rating by typing an integer from 0 to 5 or pressing arrow keys"
+                    class="undefined react-stars"
+                    style="overflow: hidden; position: relative;"
+                  >
+                    <style>
+                      
+    .react-stars-06934146182205052:before {
+      position: absolute;
+      overflow: hidden;
+      display: block;
+      z-index: 1;
+      top: 0; left: 0;
+      width: 50%;
+      content: attr(data-forhalf);
+      color: #ffd700;
+  }
+                    </style>
+                    <span
+                      class=""
+                      data-forhalf="★"
+                      data-index="0"
+                      style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: rgb(255, 215, 0); font-size: 22px;"
+                    >
+                      ★
+                    </span>
+                    <span
+                      class=""
+                      data-forhalf="★"
+                      data-index="1"
+                      style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: rgb(255, 215, 0); font-size: 22px;"
+                    >
+                      ★
+                    </span>
+                    <span
+                      class=""
+                      data-forhalf="★"
+                      data-index="2"
+                      style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: rgb(255, 215, 0); font-size: 22px;"
+                    >
+                      ★
+                    </span>
+                    <span
+                      class=""
+                      data-forhalf="★"
+                      data-index="3"
+                      style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: rgb(255, 215, 0); font-size: 22px;"
+                    >
+                      ★
+                    </span>
+                    <span
+                      class=""
+                      data-forhalf="★"
+                      data-index="4"
+                      style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: rgb(255, 215, 0); font-size: 22px;"
+                    >
+                      ★
+                    </span>
+                    <span
+                      class=""
+                      data-forhalf="★"
+                      data-index="5"
+                      style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: rgb(255, 215, 0); font-size: 22px;"
+                    >
+                      ★
+                    </span>
+                    <span
+                      class=""
+                      data-forhalf="★"
+                      data-index="6"
+                      style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: rgb(255, 215, 0); font-size: 22px;"
+                    >
+                      ★
+                    </span>
+                    <span
+                      class=""
+                      data-forhalf="★"
+                      data-index="7"
+                      style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: rgb(255, 215, 0); font-size: 22px;"
+                    >
+                      ★
+                    </span>
+                    <span
+                      class="react-stars-06934146182205052"
+                      data-forhalf="★"
+                      data-index="8"
+                      style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: gray; font-size: 22px;"
+                    >
+                      ★
+                    </span>
+                    <span
+                      class=""
+                      data-forhalf="★"
+                      data-index="9"
+                      style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: gray; font-size: 22px;"
+                    >
+                      ★
+                    </span>
+                    <p
+                      role="status"
+                      style="position: absolute; left: -200rem;"
+                    >
+                      8.8
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="style__Block-sc-1xzf5f3-5 eoCwme"
+            >
+              <div
+                class="style__Overview-sc-1xzf5f3-6 gyiwdH"
+              >
+                Overview: 
+                A tragic accident lead to Kaori's blindness, but she clings to life and the smaller pleasures it can still afford her. She meets Rui and begins to talk to him. Rui was once a promising kickboxer, but something happened in his past. Kaori's smile brings out a change in Rui. However, the two are connected in more than one way. Rui attempts to do what is right.
+              </div>
+              <div
+                class="style__ButtonGroup-sc-1xzf5f3-7 gKxUYM"
+              >
+                <a
+                  class="style__Button-sc-1xzf5f3-8 bpOjzc"
+                  href="/home/730154"
+                >
+                  Open movie
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span
+          style="font-size: 0px;"
+        />
+        <div
+          class="style__Container-sc-1xzf5f3-0 llUJEe"
+        >
+          <img
+            alt="Poster"
+            class="style__Poster-sc-1xzf5f3-1 gKTfaY"
+            src="http://image.tmdb.org/t/p/original//5hNcsnMkwU2LknLoru73c76el3z.jpg"
+          />
+          <div
+            class="style__Wrap-sc-1xzf5f3-2 daCGNj"
+          >
+            <div>
+              <div
+                class="style__Title-sc-1xzf5f3-3 bVHCIC"
+              >
+                Dilwale Dulhania Le Jayenge
+              </div>
+              <p
+                class="style__Release-sc-1xzf5f3-4 cwkOWS"
+              >
+                Release date: 
+                1995-10-20
+              </p>
+              <div
+                class="style__WrapRating-sc-1xzf5f3-9 hHbuls"
+              >
+                <div
+                  class="style__Rating-sc-1xzf5f3-10 djznqf"
+                >
+                  8.7
+                </div>
+                <div
+                  class="react-stars-wrapper-045151826865700473"
+                  style="display: flex;"
+                >
+                  <div
+                    aria-label="add rating by typing an integer from 0 to 5 or pressing arrow keys"
+                    class="undefined react-stars"
+                    style="overflow: hidden; position: relative;"
+                  >
+                    <style>
+                      
+    .react-stars-045151826865700473:before {
+      position: absolute;
+      overflow: hidden;
+      display: block;
+      z-index: 1;
+      top: 0; left: 0;
+      width: 50%;
+      content: attr(data-forhalf);
+      color: #ffd700;
+  }
+                    </style>
+                    <span
+                      class=""
+                      data-forhalf="★"
+                      data-index="0"
+                      style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: rgb(255, 215, 0); font-size: 22px;"
+                    >
+                      ★
+                    </span>
+                    <span
+                      class=""
+                      data-forhalf="★"
+                      data-index="1"
+                      style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: rgb(255, 215, 0); font-size: 22px;"
+                    >
+                      ★
+                    </span>
+                    <span
+                      class=""
+                      data-forhalf="★"
+                      data-index="2"
+                      style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: rgb(255, 215, 0); font-size: 22px;"
+                    >
+                      ★
+                    </span>
+                    <span
+                      class=""
+                      data-forhalf="★"
+                      data-index="3"
+                      style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: rgb(255, 215, 0); font-size: 22px;"
+                    >
+                      ★
+                    </span>
+                    <span
+                      class=""
+                      data-forhalf="★"
+                      data-index="4"
+                      style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: rgb(255, 215, 0); font-size: 22px;"
+                    >
+                      ★
+                    </span>
+                    <span
+                      class=""
+                      data-forhalf="★"
+                      data-index="5"
+                      style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: rgb(255, 215, 0); font-size: 22px;"
+                    >
+                      ★
+                    </span>
+                    <span
+                      class=""
+                      data-forhalf="★"
+                      data-index="6"
+                      style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: rgb(255, 215, 0); font-size: 22px;"
+                    >
+                      ★
+                    </span>
+                    <span
+                      class=""
+                      data-forhalf="★"
+                      data-index="7"
+                      style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: rgb(255, 215, 0); font-size: 22px;"
+                    >
+                      ★
+                    </span>
+                    <span
+                      class="react-stars-045151826865700473"
+                      data-forhalf="★"
+                      data-index="8"
+                      style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: gray; font-size: 22px;"
+                    >
+                      ★
+                    </span>
+                    <span
+                      class=""
+                      data-forhalf="★"
+                      data-index="9"
+                      style="position: relative; overflow: hidden; cursor: default; display: block; float: left; color: gray; font-size: 22px;"
+                    >
+                      ★
+                    </span>
+                    <p
+                      role="status"
+                      style="position: absolute; left: -200rem;"
+                    >
+                      8.7
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="style__Block-sc-1xzf5f3-5 eoCwme"
+            >
+              <div
+                class="style__Overview-sc-1xzf5f3-6 gyiwdH"
+              >
+                Overview: 
+                Raj is a rich, carefree, happy-go-lucky second generation NRI. Simran is the daughter of Chaudhary Baldev Singh, who in spite of being an NRI is very strict about adherence to Indian values. Simran has left for India to be married to her childhood fiancé. Raj leaves for India with a mission at his hands, to claim his lady love under the noses of her whole family. Thus begins a saga.
+              </div>
+              <div
+                class="style__ButtonGroup-sc-1xzf5f3-7 gKxUYM"
+              >
+                <a
+                  class="style__Button-sc-1xzf5f3-8 bpOjzc"
+                  href="/home/19404"
+                >
+                  Open movie
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ul>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
