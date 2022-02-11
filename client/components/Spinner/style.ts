@@ -36,6 +36,15 @@ export const StyledSpinner = styled.svg.attrs({
     animation: dash 1.5s ease-in-out infinite;
   }
 
+  @media (max-width: 500px) {
+    width: 40px;
+    height: 40px;
+  }
+  @media (max-width: 900px) {
+    width: 140px;
+    height: 140px;
+  }
+
   @keyframes rotate {
     100% {
       transform: rotate(360deg);
@@ -54,13 +63,5 @@ export const StyledSpinner = styled.svg.attrs({
       stroke-dasharray: 90, 150;
       stroke-dashoffset: -124;
     }
-  }
-  @media (max-width: 500px) {
-    width: 140px;
-    height: 140px;
-  }
-  @media (max-width: 900px) {
-    width: 240px;
-    height: 240px;
   }
 `;
