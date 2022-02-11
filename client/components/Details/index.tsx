@@ -30,6 +30,7 @@ import {
 import DetailGenre from "../DetailGenre";
 import DetailCompany from "../DetailCompany";
 import DetailCountry from "../DetailCountry";
+import StarRatingComponent from "react-star-rating-component";
 
 interface DetailsProps {
   movie: IDetails;
@@ -44,13 +45,11 @@ const Details: FC<DetailsProps> = ({ movie }) => {
         <Original>Original title: {movie.original_title}</Original>
         <Block>
           <Vote>Vote average: {movie.vote_average}</Vote>
-          <ReactStars
-            count={10}
-            value={movie.vote_average}
-            size={14}
-            activeColor="#ffd700"
-            edit={false}
-            isHalf={true}
+          <StarRatingComponent
+            name="rate"
+            starCount={Number(10)}
+            value={Number(movie.vote_average)}
+            starColor="#ffd700"
           />
         </Block>
         <Language>
@@ -74,13 +73,13 @@ const Details: FC<DetailsProps> = ({ movie }) => {
             {movie.homepage}
           </a>
         </Link>
-        <Company role='company'>
+        <Company role="company">
           Products companies:
           {movie.production_companies.map((product: IProductCompany) => (
             <DetailCompany key={product.id} company={product} />
           ))}
         </Company>
-        <Countries role='country'>
+        <Countries role="country">
           {movie.production_countries.map((country: IProductCountry) => (
             <DetailCountry country={country} key={country.iso_3166_1} />
           ))}
