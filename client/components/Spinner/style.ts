@@ -15,7 +15,12 @@ export const Circle = styled.circle.attrs({
   r: "20",
   fill: "none",
   strokeWidth: "4",
-})``;
+})`
+  @media (max-width: 500px) {
+    width: 40px;
+    height: 40px;
+  }
+`;
 
 export const StyledSpinner = styled.svg.attrs({
   viewBox: "0 0 50 50",
@@ -29,6 +34,15 @@ export const StyledSpinner = styled.svg.attrs({
     stroke: #5652bf;
     stroke-linecap: round;
     animation: dash 1.5s ease-in-out infinite;
+  }
+
+  @media (max-width: 500px) {
+    width: 40px;
+    height: 40px;
+  }
+  @media (max-width: 900px) {
+    width: 140px;
+    height: 140px;
   }
 
   @keyframes rotate {

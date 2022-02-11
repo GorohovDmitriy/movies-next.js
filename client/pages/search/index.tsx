@@ -8,12 +8,14 @@ import { FormEvent, useState } from "react";
 import { WebsiteUrls } from "../../types/enums";
 import { IMovieSearch } from "../../types/movies";
 import Welcome from "..";
+import useDebounce from "../../utils/useDebounce";
 
 const Search: NextPage = () => {
   const [value, setValue] = useState("");
+  const debounce = useDebounce(value, 1000);
   const { data, fetchMore } = useQuery<IMovieSearch>(SEARCH_MOVIES, {
     variables: {
-      title: value,
+      title: debounce,
     },
   });
   const movies = data?.searchMovies?.results;
