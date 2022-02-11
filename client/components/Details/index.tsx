@@ -6,7 +6,6 @@ import {
   IProductCountry,
 } from "../../types/movies";
 import { imageUrl } from "../../utils";
-import ReactStars from "react-rating-stars-component";
 import {
   Block,
   Budget,
